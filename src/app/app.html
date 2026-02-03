@@ -15,6 +15,7 @@
         viewBox="0 0 982 239"
         fill="none"
         class="angular-logo"
+        (click)="onLogoClicked()"
       >
         <g clip-path="url(#a)">
           <path
@@ -146,6 +147,16 @@
     </div>
   </div>
 </main>
+
+<div class="input-wrapper">
+  <input
+    #titleInput
+    type="text"
+    class="textbox"
+    [value]="data().title"
+    (keyup)="onKeyUp(titleInput.value)"
+  />
+</div>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
