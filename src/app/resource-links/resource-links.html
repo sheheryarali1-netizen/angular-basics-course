@@ -1,23 +1,17 @@
 <div class="pill-group">
-  @for (
-    item of [
-      { title: 'Explore the Docs', link: 'https://angular.dev' },
-      { title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
-      {
-        title: 'Prompt and best practices for AI',
-        link: 'https://angular.dev/ai/develop-with-ai',
-      },
-      { title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
-      {
-        title: 'Angular Language Service',
-        link: 'https://angular.dev/tools/language-service',
-      },
-      { title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
-    ];
-    track item.title
-  ) {
-    <a class="pill" [href]="item.link" target="_blank" rel="noopener">
-      <span>{{ item.title }}</span>
+  @for (item of links(); track item.id) {
+    <a
+      class="pill"
+      [href]="item.link"
+      target="_blank"
+      rel="noopener"
+      [class.is-first]="$first"
+      [class.is-last]="$last"
+      [class.is-even]="$even"
+      [class.is-odd]="$odd"
+    >
+      <span>{{ item.title }} - {{ $index }}</span>
+
       <svg
         xmlns="http://www.w3.org/2000/svg"
         height="14"

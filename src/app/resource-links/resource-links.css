@@ -50,3 +50,19 @@
 .pill-group svg {
   margin-inline-start: 0.25rem;
 }
+
+.is-even {
+  background-color: lightgreen;
+}
+
+.is-odd {
+  background-color: lightyellow;
+}
+
+.is-first {
+  background-color: lightcoral;
+}
+
+.is-last {
+  background-color: lightblue;
+}
