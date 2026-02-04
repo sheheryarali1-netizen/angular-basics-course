@@ -1,3 +1,4 @@
+import { NgClass } from '@angular/common';
 import { Component, signal } from '@angular/core';
 
 interface Link {
@@ -8,7 +9,7 @@ interface Link {
 
 @Component({
   selector: 'app-resource-links',
-  imports: [],
+  imports: [NgClass],
   templateUrl: './resource-links.html',
   styleUrl: './resource-links.css',
 })
@@ -31,4 +32,12 @@ export class ResourceLinks {
   ]);
 
   protected readonly emptyLinks = signal<Link[]>([]);
+
+  public generateClasses(isFirst: boolean, isLast: boolean, isEven: boolean, isOdd: boolean) {
+    if (isFirst) return ['is-first'];
+    if (isLast) return ['is-last'];
+    if (isEven) return ['is-even'];
+    if (isOdd) return ['is-odd'];
+    return [];
+  }
 }

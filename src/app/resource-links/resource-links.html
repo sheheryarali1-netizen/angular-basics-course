@@ -5,10 +5,7 @@
       [href]="item.link"
       target="_blank"
       rel="noopener"
-      [class.is-first]="$first"
-      [class.is-last]="$last"
-      [class.is-even]="$even"
-      [class.is-odd]="$odd"
+      [ngClass]="generateClasses($first, $last, $even, $odd)"
     >
       @if (item.title) {
         <span>{{ item.title }} - {{ $index }}</span>
