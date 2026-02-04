@@ -9,3 +9,13 @@ h1 {
 p {
   margin-top: 1.5rem;
 }
+
+.button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  font-size: 1.25rem;
+  background-color: rebeccapurple;
+  color: white;
+  cursor: pointer;
+}

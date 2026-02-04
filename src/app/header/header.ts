@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, EventEmitter, input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -8,4 +8,11 @@ import { Component, input } from '@angular/core';
 })
 export class Header {
   public readonly title = input.required<string>();
+
+  @Output()
+  buttonClicked = new EventEmitter<string>();
+
+  public onButtonClicked() {
+    this.buttonClicked.emit('Header - button clicked....');
+  }
 }

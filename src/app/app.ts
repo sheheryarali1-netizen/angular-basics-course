@@ -12,4 +12,8 @@ import { Header } from './header/header';
 })
 export class App {
   protected readonly title = signal('Angular Core Deep Dive');
+
+  public onHeaderClicked(value: string) {
+    console.log(value);
+  }
 }
