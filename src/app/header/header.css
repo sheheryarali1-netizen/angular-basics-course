@@ -19,3 +19,7 @@ p {
   color: white;
   cursor: pointer;
 }
+
+.pipe {
+  padding-block: 16px;
+}
