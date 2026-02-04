@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { InputField } from './input-field';
+import { ResourceLinks } from './resource-links';
 
-describe('InputField', () => {
-  let component: InputField;
-  let fixture: ComponentFixture<InputField>;
+describe('ResourceLinks', () => {
+  let component: ResourceLinks;
+  let fixture: ComponentFixture<ResourceLinks>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [InputField]
+      imports: [ResourceLinks]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(InputField);
+    fixture = TestBed.createComponent(ResourceLinks);
     component = fixture.componentInstance;
     await fixture.whenStable();
   });
