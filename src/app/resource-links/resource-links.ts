@@ -1,5 +1,11 @@
 import { Component, signal } from '@angular/core';
 
+interface Link {
+  id: number;
+  title: string;
+  link: string;
+}
+
 @Component({
   selector: 'app-resource-links',
   imports: [],
@@ -7,7 +13,7 @@ import { Component, signal } from '@angular/core';
   styleUrl: './resource-links.css',
 })
 export class ResourceLinks {
-  protected readonly links = signal([
+  protected readonly links = signal<Link[]>([
     { id: 1, title: 'Explore the Docs', link: 'https://angular.dev' },
     { id: 2, title: 'Learn with Tutorials', link: 'https://angular.dev/tutorials' },
     {
@@ -23,4 +29,6 @@ export class ResourceLinks {
     },
     { id: 6, title: 'Angular DevTools', link: 'https://angular.dev/tools/devtools' },
   ]);
+
+  protected readonly emptyLinks = signal<Link[]>([]);
 }
