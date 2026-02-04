@@ -1,4 +1,4 @@
-import { NgClass } from '@angular/common';
+import { NgClass, NgStyle } from '@angular/common';
 import { Component, signal } from '@angular/core';
 
 interface Link {
@@ -9,7 +9,7 @@ interface Link {
 
 @Component({
   selector: 'app-resource-links',
-  imports: [NgClass],
+  imports: [NgClass, NgStyle],
   templateUrl: './resource-links.html',
   styleUrl: './resource-links.css',
 })
@@ -39,5 +39,11 @@ export class ResourceLinks {
     if (isEven) return ['is-even'];
     if (isOdd) return ['is-odd'];
     return [];
+  }
+
+  public generateStyles() {
+    return {
+      'text-decoration': 'underline',
+    };
   }
 }

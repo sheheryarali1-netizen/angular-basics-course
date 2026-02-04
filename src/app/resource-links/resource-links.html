@@ -8,9 +8,9 @@
       [ngClass]="generateClasses($first, $last, $even, $odd)"
     >
       @if (item.title) {
-        <span>{{ item.title }} - {{ $index }}</span>
+        <span [ngStyle]="generateStyles()">{{ item.title }} - {{ $index }}</span>
       } @else {
-        <span>Title not found - {{ $index }}</span>
+        <span [ngStyle]="generateStyles()">Title not found - {{ $index }}</span>
       }
 
       <svg
