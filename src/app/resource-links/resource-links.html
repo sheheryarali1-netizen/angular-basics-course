@@ -25,6 +25,20 @@
         />
       </svg>
     </a>
+
+    @switch (item.id) {
+      @case (3) {
+        <span>(Outdated)</span>
+      }
+
+      @case (4) {
+        <span>(Deprecated)</span>
+      }
+
+      @default {
+        <span>(New)</span>
+      }
+    }
   } @empty {
     <h1>No links found!</h1>
   }
