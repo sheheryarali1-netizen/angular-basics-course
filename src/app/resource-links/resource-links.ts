@@ -21,7 +21,7 @@ export class ResourceLinks {
       title: 'Prompt and best practices for AI',
       link: 'https://angular.dev/ai/develop-with-ai',
     },
-    { id: 4, title: 'CLI Docs', link: 'https://angular.dev/tools/cli' },
+    { id: 4, title: '', link: 'https://angular.dev/tools/cli' },
     {
       id: 5,
       title: 'Angular Language Service',

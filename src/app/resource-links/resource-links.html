@@ -10,7 +10,11 @@
       [class.is-even]="$even"
       [class.is-odd]="$odd"
     >
-      <span>{{ item.title }} - {{ $index }}</span>
+      @if (item.title) {
+        <span>{{ item.title }} - {{ $index }}</span>
+      } @else {
+        <span>Title not found - {{ $index }}</span>
+      }
 
       <svg
         xmlns="http://www.w3.org/2000/svg"
